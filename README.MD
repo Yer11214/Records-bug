@@ -50,4 +50,19 @@ Components({
 }),
 ```
 
+### 在nutui-uniapp中使用组件样式总是莫名奇妙丢失
+`
+有的时候出现某个组件样式丢失，这个很奇怪最初是根据如下导入的
+`
+```
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^nut-(.*)?-(.*)": "nutui-uniapp/components/$1$2/$1$2.vue",
+      "^nut-(.*)": "nutui-uniapp/components/$1/$1.vue"
+    }
+  },
 
+```
+后续我又重新查看了[文档](https://nutui-uniapp.netlify.app/guide/quick-start.html#%E7%BB%84%E4%BB%B6-ts-%E7%B1%BB%E5%9E%8B%E6%94%AF%E6%8C%81)
+使用`使用 @uni-helper/vite-plugin-uni-components 自动导入组件`最终解决问题。地址：[自动导入组件](https://nutui-uniapp.netlify.app/guide/quick-start.html#%E7%BB%84%E4%BB%B6-ts-%E7%B1%BB%E5%9E%8B%E6%94%AF%E6%8C%81)
