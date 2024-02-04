@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "dev": "vitepress dev docs --host",
+    "build": "vitepress build docs",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0-beta.5",
+    "vitepress-plugin-pagefind": "^0.2.4"
+  }
+}
