@@ -42,3 +42,25 @@ var _tinycolor = require("@ctrl/tinycolor");
     ...
  }
 ```
+
+## 在使用nutui-uniapp的时候，怎么可以清空掉nut-button里面的border?
+新建一个scss文件 列比如nut.scss
+```
+$button-default-border-color: blue;
+```
+然后再vite.config.ts中导入
+
+``` javascript
+//vite.config.ts
+css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@import "nutui-uniapp/styles/variables.scss";@import "@/styles/nut.scss";',
+      },
+    },
+  },
+```
+可以[参考](https://www.uniapp-nutui.tech/guide/theme.html#%E4%BD%BF%E7%94%A8-sass-%E5%8F%98%E9%87%8F-%E8%BF%9B%E8%A1%8C%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE)
+
+
+[原文地址](https://github.com/nutui-uniapp/nutui-uniapp/issues/177)
